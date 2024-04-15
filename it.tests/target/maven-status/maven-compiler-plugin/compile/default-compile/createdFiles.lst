@@ -1,0 +1,4 @@
+com/ksr/newsportal/it/tests/HtmlUnitClient.class
+com/ksr/newsportal/it/tests/PublishPageValidationIT.class
+com/ksr/newsportal/it/tests/CreatePageIT.class
+com/ksr/newsportal/it/tests/GetPageIT.class

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 11
+Implementation-Title: News Portal - UI apps
+Implementation-Version: 1.0.0-SNAPSHOT
+Content-Package-Type: application
+Content-Package-Id: com.ksr.newsportal:newsportal.ui.apps:1.0.0-SNAPSHOT
+Content-Package-Description: UI apps package for News Portal
+Content-Package-Roots: /apps/newsportal/clientlibs,/apps/newsportal/comp
+ onents,/apps/newsportal/i18n
+Import-Package: com.adobe.cq.wcm.core.components.models;version="[12.28.
+ 0,13.0.0)",com.ksr.newsportal.core.models;version="[1.0.0,2.0.0)",org.a
+ pache.sling.scripting.sightly;version="[2.0.0,3.0.0)"
+
