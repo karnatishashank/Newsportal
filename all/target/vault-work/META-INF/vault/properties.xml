@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>News Portal - All</comment>
+<entry key="allowIndexDefinitions">false</entry>
+<entry key="created">2024-02-10T01:37:42.073Z</entry>
+<entry key="groupId">com.ksr.newsportal</entry>
+<entry key="name">newsportal.all</entry>
+<entry key="description">All content package for News Portal</entry>
+<entry key="artifactId">newsportal.all</entry>
+<entry key="version">1.0.0-SNAPSHOT</entry>
+<entry key="packageType">container</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">com.ksr.newsportal</entry>
+</properties>

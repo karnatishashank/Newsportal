@@ -1,0 +1,107 @@
+{
+  "id":"com.ksr.newsportal:newsportal.all:slingosgifeature:user-aggregated-publish:1.0.0-SNAPSHOT",
+  "bundles":[
+    {
+      "id":"com.ksr.newsportal:newsportal.core:1.0.0-SNAPSHOT",
+      "feature-origins":"com.ksr.newsportal:newsportal.all:slingosgifeature:1.0.0-SNAPSHOT",
+      "Bundle-SymbolicName":"newsportal.core",
+      "Bundle-Version":"1.0.0.SNAPSHOT",
+      "start-order":"20",
+      "content-package-origins":"com.ksr.newsportal:newsportal.all:1.0.0-SNAPSHOT"
+    }
+  ],
+  "configurations":  {
+    "com.adobe.cq.wcm.core.components.internal.servlets.TableOfContentsFilter~newsportal":    {
+      ":configurator:content-package-origins":"com.ksr.newsportal:newsportal.all:1.0.0-SNAPSHOT|com.ksr.newsportal:newsportal.ui.config:1.0.0-SNAPSHOT",
+      "enabled":"true",
+      ":configurator:feature-origins-enabled":[
+        "com.ksr.newsportal:newsportal.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.ksr.newsportal:newsportal.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ]
+    },
+    "org.apache.sling.commons.log.LogManager.factory.config~newsportal":    {
+      ":configurator:content-package-origins":"com.ksr.newsportal:newsportal.all:1.0.0-SNAPSHOT|com.ksr.newsportal:newsportal.ui.config:1.0.0-SNAPSHOT",
+      "org.apache.sling.commons.log.names":[
+        "com.ksr.newsportal"
+      ],
+      "org.apache.sling.commons.log.level":"INFO",
+      "org.apache.sling.commons.log.file":"logs/error.log",
+      "org.apache.sling.commons.log.additiv":"false",
+      ":configurator:feature-origins-org.apache.sling.commons.log.names":[
+        "com.ksr.newsportal:newsportal.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.file":[
+        "com.ksr.newsportal:newsportal.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.level":[
+        "com.ksr.newsportal:newsportal.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.additiv":[
+        "com.ksr.newsportal:newsportal.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.ksr.newsportal:newsportal.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ]
+    },
+    "org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl":    {
+      ":configurator:content-package-origins":"com.ksr.newsportal:newsportal.all:1.0.0-SNAPSHOT|com.ksr.newsportal:newsportal.ui.config:1.0.0-SNAPSHOT",
+      "resource.resolver.mapping":[
+        "/content/newsportal/</",
+        "/:/"
+      ],
+      ":configurator:feature-origins-resource.resolver.mapping":[
+        "com.ksr.newsportal:newsportal.all:slingosgifeature:publish:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.ksr.newsportal:newsportal.all:slingosgifeature:publish:1.0.0-SNAPSHOT"
+      ]
+    }
+  },
+  "assembled-features:ARTIFACTS|TRANSIENT":[
+    "com.ksr.newsportal:newsportal.all:slingosgifeature:1.0.0-SNAPSHOT",
+    "com.ksr.newsportal:newsportal.all:slingosgifeature:publish:1.0.0-SNAPSHOT"
+  ],
+  "repoinit:TEXT|true":[
+    "# origin=com.ksr.newsportal:newsportal.all:1.0.0-SNAPSHOT|com.ksr.newsportal:newsportal.ui.config:1.0.0-SNAPSHOT source=org.apache.sling.jcr.repoinit.RepositoryInitializer~newsportal",
+    "create path (sling:OrderedFolder) /content/dam/newsportal",
+    "create path (nt:unstructured) /content/dam/newsportal/jcr:content",
+    "set properties on /content/dam/newsportal/jcr:content",
+    "  set cq:conf{String} to /conf/newsportal",
+    "  set jcr:title{String} to \"News Portal\"",
+    "end"
+  ],
+  "content-packages:ARTIFACTS|true":[
+    {
+      "id":"com.ksr.newsportal:newsportal.ui.config:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+      "feature-origins":"com.ksr.newsportal:newsportal.all:slingosgifeature:1.0.0-SNAPSHOT"
+    },
+    {
+      "id":"com.ksr.newsportal:newsportal.ui.apps:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+      "feature-origins":"com.ksr.newsportal:newsportal.all:slingosgifeature:1.0.0-SNAPSHOT"
+    },
+    {
+      "id":"com.ksr.newsportal:newsportal.all:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+      "feature-origins":"com.ksr.newsportal:newsportal.all:slingosgifeature:1.0.0-SNAPSHOT"
+    }
+  ],
+  "api-regions:JSON|false":[
+    {
+      "name":"global",
+      "exports":[
+        "com.ksr.newsportal.core.filters",
+        "com.ksr.newsportal.core.listeners",
+        "com.ksr.newsportal.core.models",
+        "com.ksr.newsportal.core.schedulers",
+        "com.ksr.newsportal.core.servlets"
+      ],
+      "feature-origins":[
+        "com.ksr.newsportal:newsportal.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ]
+    }
+  ],
+  "artifact-rules:JSON|false":{
+
+  }
+}
