@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.ksr.newsportal.core.servlets.FitnessCalculatorServlet">
+  <property name="sling.servlet.paths" type="String" value="/bin/fitness-calculator"/>
+  <service>
+    <provide interface="javax.servlet.Servlet"/>
+  </service>
+  <implementation class="com.ksr.newsportal.core.servlets.FitnessCalculatorServlet"/>
+</scr:component>

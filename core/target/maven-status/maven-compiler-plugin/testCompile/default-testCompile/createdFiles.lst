@@ -1,0 +1,7 @@
+com/ksr/newsportal/core/models/HelloWorldModelTest.class
+com/ksr/newsportal/core/servlets/SimpleServletTest.class
+com/ksr/newsportal/core/filters/LoggingFilterTest.class
+com/ksr/newsportal/core/testcontext/AppAemContext.class
+com/ksr/newsportal/core/testcontext/AppAemContext$1.class
+com/ksr/newsportal/core/listeners/SimpleResourceListenerTest.class
+com/ksr/newsportal/core/schedulers/SimpleScheduledTaskTest.class
